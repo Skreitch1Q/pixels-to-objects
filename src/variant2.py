@@ -145,7 +145,7 @@ def run(config: dict[str, Any], out_dir: Path, data_dir: Path, image_override: s
 
     image_spec = image_override or config["image"]
     gray = load_image(image_spec, data_dir=data_dir, color=False)
-    save_gray(before_dir / "coins.png", gray)
+    save_gray(before_dir / "source.png", gray)
 
     blur_sigma = float(config.get("pre_blur_sigma", 0.0))
     if blur_sigma > 0:

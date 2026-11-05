@@ -91,6 +91,8 @@ def load_image(spec: str | Path, data_dir: str | Path = "data", color: bool = Fa
     data_dir = Path(data_dir)
     spec = str(spec)
     candidate = Path(spec)
+    if not candidate.exists() and not candidate.is_absolute():
+        candidate = data_dir / spec
 
     if candidate.exists():
         if color:
@@ -156,7 +158,9 @@ def save_csv(path: str | Path, rows: Iterable[Mapping[str, Any]]) -> None:
         path.write_text("", encoding="utf-8")
         return
     with open(path, "w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(
+            fh, fieldnames=list(rows[0].keys()), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(rows)
 

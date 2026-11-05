@@ -1,42 +1,42 @@
 {
   "variant": 3,
-  "image": "astronaut",
+  "image": "images3.jpg",
   "image_shape": [
-    512,
-    512,
+    459,
+    435,
     3
   ],
   "classes": [
     {
-      "class": "orange",
-      "title": "Оранжевый костюм",
+      "class": "green",
+      "title": "Зелёная палуба",
       "object_count": 1,
-      "total_area_px": 55400,
-      "area_pct": 21.1334228515625,
-      "mean_object_area_px": 55400.0
+      "total_area_px": 29905,
+      "area_pct": 14.977587458993815,
+      "mean_object_area_px": 29905.0
     },
     {
-      "class": "skin",
-      "title": "Кожа (лицо)",
-      "object_count": 1,
-      "total_area_px": 12866,
-      "area_pct": 4.907989501953125,
-      "mean_object_area_px": 12866.0
+      "class": "pink",
+      "title": "Розовая пасть",
+      "object_count": 2,
+      "total_area_px": 17199,
+      "area_pct": 8.613928329952671,
+      "mean_object_area_px": 8599.5
     },
     {
-      "class": "blue",
-      "title": "Синие объекты",
-      "object_count": 5,
-      "total_area_px": 9706,
-      "area_pct": 3.702545166015625,
-      "mean_object_area_px": 1941.2
+      "class": "water",
+      "title": "Морская вода",
+      "object_count": 4,
+      "total_area_px": 75089,
+      "area_pct": 37.607492550021284,
+      "mean_object_area_px": 18772.25
     }
   ],
-  "total_segmented_pct": 29.74395751953125,
+  "total_segmented_pct": 61.19900833896777,
   "parameters": {
-    "morph_kernel": 9,
+    "morph_kernel": 7,
     "morph_iterations": 1,
-    "min_area": 150,
-    "overlay_alpha": 0.4
+    "min_area": 3000,
+    "overlay_alpha": 0.45
   }
 }

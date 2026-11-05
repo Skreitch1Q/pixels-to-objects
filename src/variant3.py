@@ -136,7 +136,7 @@ def run(config: dict[str, Any], out_dir: Path, data_dir: Path, image_override: s
 
     image_spec = image_override or config["image"]
     image = load_image(image_spec, data_dir=data_dir, color=True)
-    save_rgb(before_dir / "astronaut.png", image)
+    save_rgb(before_dir / "source.png", image)
 
     hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
     classes = list(config["classes"])

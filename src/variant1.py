@@ -314,7 +314,7 @@ def run(config: dict[str, Any], out_dir: Path, data_dir: Path, image_override: s
     image = load_image(image_spec, data_dir=data_dir, color=False)
     if image.ndim != 2:
         raise ValueError("Вариант 1 ожидает полутоновое изображение")
-    save_gray(out_dir / "before" / "camera.png", image)
+    save_gray(before_dir / "source.png", image)
 
     filters = make_filters(config)
     seed = int(config.get("seed", 42))
@@ -380,7 +380,7 @@ def run(config: dict[str, Any], out_dir: Path, data_dir: Path, image_override: s
     hist_eq_clean = apply_contrast(image, "hist_eq", config)
 
     save_gray(before_dir / f"noisy_{example_name}.png", noisy)
-    save_gray(before_dir / "clean_camera.png", image)
+    save_gray(before_dir / "clean_source.png", image)
     for method, result in filtered.items():
         save_gray(after_dir / f"{method}_filter.png", result)
     save_gray(after_dir / "clahe_clean.png", clahe_clean)

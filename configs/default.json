@@ -1,10 +1,10 @@
 {
   "variant1": {
-    "image": "camera",
+    "image": "images.jpg",
     "seed": 42,
     "trials": 3,
     "gaussian_kernel": 5,
-    "gaussian_sigma": 1.4,
+    "gaussian_sigma": 1.2,
     "median_kernel": 5,
     "noise_sigmas": [5, 10, 15, 20, 30, 40],
     "impulse_densities": [0.01, 0.02, 0.05, 0.08, 0.12],
@@ -24,53 +24,54 @@
     "clahe_tile_grid_size": [8, 8]
   },
   "variant2": {
-    "image": "coins",
+    "image": "images2.jpg",
     "pre_blur_sigma": 1.0,
-    "sobel_percentile": 85,
-    "scharr_percentile": 85,
+    "sobel_percentile": 82,
+    "scharr_percentile": 82,
     "canny_low": 60,
-    "canny_high": 150,
-    "morph_kernel": 3,
+    "canny_high": 180,
+    "morph_kernel": 7,
     "morph_iterations": 1,
     "morph_open_kernel": 0,
     "min_edge_area": 20,
-    "min_area": 500,
-    "max_area": 5000
+    "min_area": 25000,
+    "max_area": 0
   },
   "variant3": {
-    "image": "astronaut",
-    "morph_kernel": 9,
+    "image": "images3.jpg",
+    "morph_kernel": 7,
     "morph_iterations": 1,
     "morph_min_area": 25,
-    "min_area": 150,
-    "overlay_alpha": 0.4,
+    "min_area": 3000,
+    "overlay_alpha": 0.45,
     "classes": [
       {
-        "name": "orange",
-        "title": "Оранжевый костюм",
+        "name": "green",
+        "title": "Зелёная палуба",
         "hsv_ranges": [
-          [[2, 130, 80], [12, 255, 255]]
+          [[30, 50, 40], [65, 255, 255]]
         ],
-        "color": [255, 120, 40],
-        "min_area": 1000
+        "color": [80, 200, 90],
+        "min_area": 3000
       },
       {
-        "name": "skin",
-        "title": "Кожа (лицо)",
+        "name": "pink",
+        "title": "Розовая пасть",
         "hsv_ranges": [
-          [[8, 55, 80], [18, 130, 255]]
+          [[0, 60, 50], [15, 255, 255]],
+          [[170, 60, 50], [179, 255, 255]]
         ],
-        "color": [255, 205, 160],
-        "min_area": 1000
+        "color": [255, 90, 120],
+        "min_area": 2000
       },
       {
-        "name": "blue",
-        "title": "Синие объекты",
+        "name": "water",
+        "title": "Морская вода",
         "hsv_ranges": [
-          [[90, 70, 25], [140, 255, 255]]
+          [[100, 40, 15], [140, 255, 220]]
         ],
-        "color": [70, 120, 255],
-        "min_area": 150
+        "color": [70, 130, 255],
+        "min_area": 3000
       }
     ]
   }
