@@ -1,0 +1,77 @@
+{
+  "variant1": {
+    "image": "camera",
+    "seed": 42,
+    "trials": 3,
+    "gaussian_kernel": 5,
+    "gaussian_sigma": 1.4,
+    "median_kernel": 5,
+    "noise_sigmas": [5, 10, 15, 20, 30, 40],
+    "impulse_densities": [0.01, 0.02, 0.05, 0.08, 0.12],
+    "example": {
+      "type": "gaussian",
+      "level": 25
+    },
+    "parameter_sweep": {
+      "noise_type": "gaussian",
+      "level": 25,
+      "trials": 2,
+      "gaussian_kernel": 5,
+      "gaussian_sigmas": [0.8, 1.2, 1.4, 1.6, 2.0, 2.5],
+      "median_kernels": [3, 5, 7, 9]
+    },
+    "clahe_clip_limit": 2.0,
+    "clahe_tile_grid_size": [8, 8]
+  },
+  "variant2": {
+    "image": "coins",
+    "pre_blur_sigma": 1.0,
+    "sobel_percentile": 85,
+    "scharr_percentile": 85,
+    "canny_low": 60,
+    "canny_high": 150,
+    "morph_kernel": 3,
+    "morph_iterations": 1,
+    "morph_open_kernel": 0,
+    "min_edge_area": 20,
+    "min_area": 500,
+    "max_area": 5000
+  },
+  "variant3": {
+    "image": "astronaut",
+    "morph_kernel": 9,
+    "morph_iterations": 1,
+    "morph_min_area": 25,
+    "min_area": 150,
+    "overlay_alpha": 0.4,
+    "classes": [
+      {
+        "name": "orange",
+        "title": "Оранжевый костюм",
+        "hsv_ranges": [
+          [[2, 130, 80], [12, 255, 255]]
+        ],
+        "color": [255, 120, 40],
+        "min_area": 1000
+      },
+      {
+        "name": "skin",
+        "title": "Кожа (лицо)",
+        "hsv_ranges": [
+          [[8, 55, 80], [18, 130, 255]]
+        ],
+        "color": [255, 205, 160],
+        "min_area": 1000
+      },
+      {
+        "name": "blue",
+        "title": "Синие объекты",
+        "hsv_ranges": [
+          [[90, 70, 25], [140, 255, 255]]
+        ],
+        "color": [70, 120, 255],
+        "min_area": 150
+      }
+    ]
+  }
+}

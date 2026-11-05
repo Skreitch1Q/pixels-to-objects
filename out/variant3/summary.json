@@ -1,0 +1,42 @@
+{
+  "variant": 3,
+  "image": "astronaut",
+  "image_shape": [
+    512,
+    512,
+    3
+  ],
+  "classes": [
+    {
+      "class": "orange",
+      "title": "Оранжевый костюм",
+      "object_count": 1,
+      "total_area_px": 55400,
+      "area_pct": 21.1334228515625,
+      "mean_object_area_px": 55400.0
+    },
+    {
+      "class": "skin",
+      "title": "Кожа (лицо)",
+      "object_count": 1,
+      "total_area_px": 12866,
+      "area_pct": 4.907989501953125,
+      "mean_object_area_px": 12866.0
+    },
+    {
+      "class": "blue",
+      "title": "Синие объекты",
+      "object_count": 5,
+      "total_area_px": 9706,
+      "area_pct": 3.702545166015625,
+      "mean_object_area_px": 1941.2
+    }
+  ],
+  "total_segmented_pct": 29.74395751953125,
+  "parameters": {
+    "morph_kernel": 9,
+    "morph_iterations": 1,
+    "min_area": 150,
+    "overlay_alpha": 0.4
+  }
+}
